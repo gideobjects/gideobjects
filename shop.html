@@ -6,63 +6,73 @@
     <title>Shop | GIDE Objects</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body class="shop-page">
 
-    <header class="main-header">
-        <div class="header-left">
-            <a href="index.html" class="logo">GIDE</a>
-        </div>
-        <nav class="header-center">
-            <a href="shop.html" class="nav-active">Shop</a>
-            <a href="#">Explore</a>
-            <a href="#">About</a>
-        </nav>
-        <div class="header-right">
-            <a href="#">Cart (0)</a>
-        </div>
+<header class="main-header">
+    <div class="header-left">
+        <a href="index.html" class="logo-lockup">
+            <img src="img/gide-logo.png" alt="GIDE Logo">
+            <span class="logo-text">GIDE</span>
+        </a>
+    </div>
+    <nav class="header-center">
+        <a href="shop.html" class="nav-active">Shop</a>
+        <a href="index.html#featured">Collection</a>
+        <a href="index.html#about">About</a>
+    </nav>
+    <div class="header-right">
+        <a href="#">Cart (0)</a>
+    </div>
+</header>
+
+<main class="shop-page-content">
+    <header class="shop-header fade-in-up">
+        <span class="hero-subtitle">Series 01 / 2026</span>
+        <h1 class="hero-title">The Collection</h1>
+        <p class="hero-tagline">Elevated essentials for the intentional workspace.</p>
     </header>
 
-    <main class="shop-page-content">
-        <header class="shop-header">
-            <h1>The Collection</h1>
-            <p>Elevated essentials for the intentional workspace.</p>
-        </header>
-
-        <section class="product-grid-shop">
-            <div class="shop-card">
-                <a href="product-001.html" class="shop-card-visual">
-                    <img src="img/001-mount/base.png" alt="GIDE Mount" class="base">
-                    <img src="img/001-mount/reveal.png" alt="GIDE Mount Hover" class="hover">
-                </a>
-                
-                <div class="shop-card-info">
-                    <div class="card-title-row">
-                        <a href="product-001.html"><h3>GIDE Mount</h3></a>
-                        <span class="price">$35</span>
-                    </div>
-                    <p>American Walnut / Polymer</p>
-                    <a href="product-001.html" class="view-btn">Select Material</a>
+    <section class="product-grid-shop">
+        <div class="shop-card">
+            <a href="product-001.html" class="shop-card-visual reveal-container">
+                <img src="img/001-mount/base.png" alt="GIDE Mount Matte Black – Front" class="product-img base-img">
+                <img src="img/001-mount/reveal.png" alt="GIDE Mount Matte Black – Tri View" class="product-img reveal-img">
+            </a>
+            <div class="shop-card-info">
+                <div class="card-title-row">
+                    <h3>Object 001 — GIDE Mount</h3>
+                    <span class="price">$15.00</span>
                 </div>
+                <p>Precision-milled weighted architecture. Matte black finish. Snap-fit mechanism. Designed to anchor without distraction.</p>
+                <a href="product-001.html" class="cta-button">View Details</a>
             </div>
+        </div>
 
-            <div class="shop-card coming-soon">
-                <div class="shop-card-visual">
-                    <div class="placeholder-text">Coming Soon</div>
-                </div>
-                <div class="shop-card-info">
-                    <div class="card-title-row">
-                        <h3>Object 002</h3>
-                        <span class="price">--</span>
-                    </div>
-                    <p>Research & Development</p>
-                </div>
+        <div class="shop-card coming-soon">
+            <div class="shop-card-visual">
+                <div class="placeholder-text">Object 002<br>Coming 2026</div>
             </div>
-        </section>
-    </main>
+            <div class="shop-card-info">
+                <div class="card-title-row">
+                    <h3>Object 002</h3>
+                    <span class="price">—</span>
+                </div>
+                <p>In research & development. Sign up for updates.</p>
+                <!-- Optional: add email signup form later -->
+            </div>
+        </div>
+    </section>
+</main>
 
-    <footer>
-        <p>©2026 GIDE STUDIO</p>
-    </footer>
+<footer>
+    <div class="footer-content">
+        <p>© 2026 GIDE Objects</p>
+        <div class="footer-links">
+            <a href="#">Instagram</a>
+            <a href="#">Etsy</a>
+        </div>
+    </div>
+</footer>
 
 </body>
 </html>
