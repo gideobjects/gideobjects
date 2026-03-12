@@ -1,78 +1,187 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GIDE Objects | Intentional Design</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GIDE Objects — Designed with Intention</title>
+  <meta name="description" content="GIDE Objects is a design studio that makes modular, sculptural home objects engineered with precision and finished with a warm-minimal aesthetic." />
+  <link rel="stylesheet" href="style.css" />
 </head>
-<body class="home-one-page">
+<body>
 
-<header class="main-header">
-    <div class="header-left">
-        <a href="index.html" class="logo-lockup">
-            <img src="img/gide-logo.png" alt="GIDE Logo">
-            <span class="logo-text">GIDE</span>
-        </a>
-    </div>
-    <nav class="header-center">
-        <a href="#featured">Collection</a>
-        <a href="#about">About</a>
-    </nav>
-    <div class="header-right">
-        <a href="#">Cart (0)</a>
-    </div>
-</header>
+  <!-- ════════════════════════════════
+       HEADER
+       ════════════════════════════════ -->
+  <header class="site-header">
+    <div class="container site-header__inner">
 
-<main>
-    <div class="content-wrapper">
-    <section class="hero-section">
-        <div class="hero-content fade-in-up">
-            <span class="hero-subtitle">Series 01 / 2026</span>
-            <h1 class="hero-title">GIDE</h1>
-            <p class="hero-tagline">Objects that elevate the everyday.</p>
+      <a href="index.html" class="site-header__logo" aria-label="GIDE Objects — Home">
+        <img
+          src="img/gide-logo.png"
+          alt="GIDE Objects"
+          height="22"
+          onerror="this.style.display='none'; this.nextElementSibling.style.display='block';"
+        />
+        <span class="site-header__logo-text" style="display:none;">GIDE</span>
+      </a>
+
+      <nav aria-label="Main navigation">
+        <ul class="site-nav__list">
+          <li><a href="studio.html" class="site-nav__link">Studio</a></li>
+          <li><a href="object-001.html" class="site-nav__link">Objects</a></li>
+          <li><a href="shop.html" class="site-nav__link">Shop</a></li>
+        </ul>
+      </nav>
+
+    </div>
+  </header>
+
+
+  <main>
+
+    <!-- ════════════════════════════════
+         HERO
+         ════════════════════════════════ -->
+    <section class="hero">
+      <div class="container hero__inner">
+
+        <div class="hero__text">
+          <p class="hero__eyebrow">Design Studio — Est. 2024</p>
+          <h1 class="hero__title">Objects made with intention.</h1>
+          <p class="hero__body">
+            GIDE designs modular, sculptural home objects that elevate everyday
+            rituals. Each piece is engineered with precision and finished with
+            a warm-minimal aesthetic — built to last, built to mean something.
+          </p>
+          <a href="object-001.html" class="btn">View Object 001</a>
         </div>
-        <div class="scroll-prompt">Scroll to explore ↓</div>
+
+        <div class="hero__image">
+          <img
+            class="product-image"
+            src="img/001-mount/base.png"
+            alt="GIDE Mount — top-down view"
+            loading="eager"
+          />
+        </div>
+
+      </div>
     </section>
 
-    <section id="featured" class="product-showcase">
-        <div class="section-label">Selected Objects</div>
-        
-        <div class="showcase-item">
-            <a href="product-001.html" class="visual-box reveal-container">
-                <img src="img/001-mount/base.png" alt="GIDE Mount Matte Black – Front" class="product-img base-img">
-                <img src="img/001-mount/reveal.png" alt="GIDE Mount Matte Black – Tri View" class="product-img reveal-img">
-            </a>
-            <div class="info-box">
-                <span class="obj-id">Object 001</span>
-                <h2>GIDE MOUNT</h2>
-                <p>Matte black display mount with a precise snap‑fit and stable nano adhesive. Built to stand out and hold what matters.
-                <div class="price-row">
-                    <span class="price">$15.00</span>
-                    <a href="product-001.html" class="cta-button">Details</a>
-                </div>
-            </div>
+
+    <!-- ════════════════════════════════
+         FEATURED OBJECT
+         ════════════════════════════════ -->
+    <section class="featured">
+      <div class="container">
+
+        <header class="featured__header">
+          <p class="featured__tag">Featured Object</p>
+          <h2 class="featured__title">Object 001 — GIDE Mount</h2>
+          <p class="featured__desc">
+            A wall-mounted display hook designed for jerseys and everyday hangers.
+            Engineered in matte-finish polymer with concealed fasteners and a
+            cantilevered arm profile that reads as furniture, not hardware.
+          </p>
+        </header>
+
+        <div class="featured__grid">
+
+          <div class="featured__slot">
+            <img
+              class="product-image"
+              src="img/001-mount/base.png"
+              alt="GIDE Mount — top-down view"
+              loading="lazy"
+            />
+          </div>
+
+          <div class="featured__slot">
+            <img
+              class="product-image"
+              src="img/001-mount/reveal.png"
+              alt="GIDE Mount — trimetric form view"
+              loading="lazy"
+            />
+          </div>
+
         </div>
+
+        <div class="featured__cta">
+          <a href="object-001.html" class="btn">View Object</a>
+          <a href="shop.html" class="site-nav__link" style="font-size: 0.6875rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-faint);">Shop</a>
+        </div>
+
+      </div>
     </section>
-    
 
-<section id="about" class="about-section">
-    <div class="section-label">GIDE Objects</div>
-    <p>GIDE Objects is a warm‑minimalist design studio creating modular display systems with clean geometry and quiet utility.</p>
-    <p>Each piece is engineered to feel intentional, precise, understated, and built to elevate everyday use.</p>
-</section>
-</div>
-</main>
 
-<footer>
-    <div class="footer-content">
-        <p>© 2026 GIDE Objects</p>
-        <div class="footer-links">
-            <a href="#">Instagram</a>
-            <a href="#">Etsy</a>
+    <!-- ════════════════════════════════
+         PHILOSOPHY / PROCESS
+         ════════════════════════════════ -->
+    <section class="philosophy">
+      <div class="container philosophy__inner">
+
+        <div>
+          <p class="philosophy__label">Process + Intention</p>
         </div>
+
+        <div>
+          <h2 class="philosophy__heading">Engineering clarity.<br>Nothing arbitrary.</h2>
+          <div class="philosophy__body">
+            <p>
+              Every object produced by GIDE begins with a constraint list, not a mood board.
+              Material is chosen for mechanical behaviour first — hardness, grain direction,
+              aging profile — and for appearance second. If a decision cannot be justified by
+              function or longevity, it is removed.
+            </p>
+            <p>
+              The studio documents every step: from initial problem statements and tolerance
+              studies to prototype iterations and finish selection. That documentation ships
+              with the object. You should know what you are holding and why it is the way it is.
+            </p>
+            <p>
+              GIDE makes one object at a time. When an object is complete — when it has passed
+              structural review, surface review, and a minimum of three physical prototypes —
+              a new brief is written. There is no catalogue. There is a sequence.
+            </p>
+          </div>
+          <div style="margin-top: 2rem;">
+            <a href="studio.html" class="btn">About the Studio</a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+
+  <!-- ════════════════════════════════
+       FOOTER
+       ════════════════════════════════ -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="site-footer__inner">
+
+        <div>
+          <div class="site-footer__contact">
+            <a href="mailto:hello@gideobjects.com">hello@gideobjects.com</a>
+          </div>
+          <p class="site-footer__copy" style="margin-top: 0.5rem;">
+            &copy; 2024 GIDE Objects. All rights reserved.
+          </p>
+        </div>
+
+        <ul class="site-footer__links">
+          <li><a href="https://instagram.com" target="_blank" rel="noopener noreferrer">Instagram</a></li>
+          <li><a href="https://etsy.com/shop/gideobjects" target="_blank" rel="noopener noreferrer">Etsy</a></li>
+          <li><a href="studio.html">Studio</a></li>
+        </ul>
+
+      </div>
     </div>
-</footer>
+  </footer>
 
 </body>
 </html>

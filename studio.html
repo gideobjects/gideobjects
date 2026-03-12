@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Studio — GIDE Objects</title>
+  <meta name="description" content="The history and philosophy of GIDE Objects. Engineering clarity and material honesty." />
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    /* ── Studio-page-specific styles ─────────────────────── */
+
+    .studio-hero {
+      padding: var(--section-gap) 0;
+      border-bottom: 1px solid var(--rule);
+    }
+
+    .studio-hero__inner {
+      max-width: 800px;
+    }
+
+    .studio-hero__eyebrow {
+      font-size: var(--text-xs);
+      font-weight: 600;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--ink-faint);
+      margin-bottom: 0.75rem;
+    }
+
+    .studio-hero__title {
+      font-size: var(--text-4xl);
+      font-weight: 600;
+      letter-spacing: -0.015em;
+      line-height: 1.1;
+      color: var(--ink);
+      margin-bottom: 1.5rem;
+    }
+
+    .studio-hero__body {
+      font-size: var(--text-lg);
+      color: var(--ink-muted);
+      line-height: 1.75;
+    }
+
+    /* Simple History Section */
+    .history {
+      padding: var(--section-gap) 0;
+      border-bottom: 1px solid var(--rule);
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 3rem;
+    }
+
+    .history__label {
+      font-size: var(--text-xs);
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--ink-faint);
+      margin-bottom: 1.5rem;
+    }
+
+    .history__body {
+      font-size: var(--text-base);
+      color: var(--ink-muted);
+      line-height: 1.75;
+      max-width: 52ch;
+    }
+
+    /* Values Grid */
+    .values {
+      padding: var(--section-gap) 0;
+    }
+
+    .values__label {
+      font-size: var(--text-xs);
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--ink-faint);
+      margin-bottom: 2rem;
+    }
+
+    .values__grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
+
+    .values__item-title {
+      font-size: var(--text-base);
+      font-weight: 600;
+      color: var(--ink);
+      margin-bottom: 0.5rem;
+    }
+
+    .values__item-body {
+      font-size: var(--text-sm);
+      color: var(--ink-muted);
+      line-height: 1.7;
+    }
+
+    @media (min-width: 768px) {
+      .values__grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <a href="index.html" class="site-header__logo">
+        <img src="img/gide-logo.png" alt="GIDE Objects" height="22" />
+      </a>
+      <nav>
+        <ul class="site-nav__list">
+          <li><a href="studio.html" class="site-nav__link site-nav__link--active">Studio</a></li>
+          <li><a href="object-001.html" class="site-nav__link">Objects</a></li>
+          <li><a href="shop.html" class="site-nav__link">Shop</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="studio-hero">
+      <div class="container studio-hero__inner">
+        <p class="studio-hero__eyebrow">Studio</p>
+        <h1 class="studio-hero__title">Engineering clarity.<br>Material honesty.</h1>
+        <p class="studio-hero__body">
+          GIDE is an industrial design studio focused on the intersection of mechanical engineering and functional art. We believe objects should be as technically sound as they are visually resolved.
+        </p>
+      </div>
+    </section>
+
+    <section class="history">
+      <div class="container">
+        <p class="history__label">History</p>
+        <div class="history__body">
+          <p>
+            Founded in 2024, GIDE was established to explore the relationship between form and constraint. With a background rooted in mechanical engineering and product development, the studio approaches design through the lens of manufacturing precision.
+          </p>
+          <br>
+          <p>
+            We release one object at a time. This allows for a focus on tolerance, material truth, and the rigour required to make things that last.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="values">
+      <div class="container">
+        <p class="values__label">Core Principles</p>
+        <div class="values__grid">
+          <div class="values__item">
+            <p class="values__item-title">01. Traceable Design</p>
+            <p class="values__item-body">Every decision is traceable to a functional requirement. If it doesn't serve a purpose, it is removed.</p>
+          </div>
+          <div class="values__item">
+            <p class="values__item-title">02. Material Truth</p>
+            <p class="values__item-body">We select materials for their mechanical properties first. The aesthetic is a result of the material’s nature.</p>
+          </div>
+          <div class="values__item">
+            <p class="values__item-title">03. Deliberate Pace</p>
+            <p class="values__item-body">By focusing on one object at a time, we ensure every detail meets our engineering standards before release.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="site-footer__inner">
+        <div>
+          <a href="mailto:hello@gideobjects.com">hello@gideobjects.com</a>
+          <p class="site-footer__copy">&copy; 2024 GIDE Objects.</p>
+        </div>
+        <ul class="site-footer__links">
+          <li><a href="#">Instagram</a></li>
+          <li><a href="object-001.html">Objects</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
