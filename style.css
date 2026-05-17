@@ -213,35 +213,63 @@ hr{border:none;border-top:1px solid var(--rule)}
 .case-section__label{font-size:var(--txs);font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-faint);margin-bottom:2rem}
 .case-gallery{display:grid;grid-template-columns:1fr;gap:1px;background:var(--rule)}
 @media(min-width:960px){.case-hero__inner{grid-template-columns:1fr 1fr;gap:5rem}.case-gallery{grid-template-columns:repeat(3,1fr)}}
-
 /* ============================================================
    TOOLS PAGE
    ============================================================ */
-.tools-header{padding-top:var(--gap);padding-bottom:2.5rem;border-bottom:1px solid var(--rule)}
-.tools-header__title{font-size:var(--t4xl);font-weight:700;letter-spacing:-.025em;line-height:1.1;margin-bottom:.75rem}
+.tools-header {
+  padding-top: 0.5rem;   /* or whatever you want */
+  padding-bottom: 1rem;
+}.tools-header__title{font-size:var(--t4xl);font-weight:700;letter-spacing:-.025em;line-height:1.1;margin-bottom:.75rem}
 .tools-header__desc{font-size:var(--tbase);color:var(--ink-muted);max-width:52ch;line-height:1.7}
+
 .tools-full-grid{display:grid;grid-template-columns:1fr;gap:1px;background:var(--rule);padding-block:var(--gap)}
 .tool-full-card{background:var(--bg);display:grid;grid-template-columns:1fr}
-.tool-full-card__visual{border-bottom:1px solid var(--rule);min-height:220px;display:flex;align-items:center;justify-content:center;background:var(--bg-image);position:relative;overflow:hidden}
-.tool-full-card__visual img{width:100%;height:100%;object-fit:cover}
+
+/* FIXES FOR TALL IMAGES */
+.tool-full-card__visual{
+  border-bottom:1px solid var(--rule);
+  padding: 2.5rem 1.5rem; /* Creates a clean, safe gutter around screenshots */
+  height: auto;
+  min-height: 280px;
+  max-height: 520px;     /* Prevents tall screenshots from dominating the viewport */
+  display:flex;
+  flex-direction: column;
+  align-items:center;
+  justify-content:center;
+  background:var(--bg-image);
+  position:relative;
+  overflow:hidden;
+}
+.tool-full-card__visual img{
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  max-height: 380px;    /* Locks max height down gracefully */
+  object-fit: contain;  /* Shows the entire screenshot without cropping or bursting */
+  box-shadow: 0 4px 20px rgba(0,0,0,0.04); /* Subtle edge separation for minimal look */
+}
+
 .tool-full-card__body{padding:1.75rem;display:flex;flex-direction:column;gap:1rem}
 .tool-full-card__cat{font-size:var(--txs);font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--accent-tools)}
 .tool-full-card__name{font-size:var(--t2xl);font-weight:700;letter-spacing:-.02em;line-height:1.15}
 .tool-full-card__desc{font-size:var(--tbase);color:var(--ink-muted);line-height:1.75;max-width:52ch;flex:1}
-.tool-full-card__footer{display:flex;align-items:center;justify-content:space-between;gap:1rem;flex-wrap:wrap;padding-top:1rem;border-top:1px solid var(--rule)}
-.tool-full-card__status{font-size:var(--txs);font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-faint)}
-.tool-full-card__status--live{color:var(--accent-tools)}
+.tool-full-card__footer{display:flex;align-items:center;justify-content:space-between;gap:1rem;flex-wrap:wrap;padding-top:1rem;border-top:1px solid var(--rule);margin-top: auto;}
+
 /* IntentLink feature list */
 .intent-features{display:flex;flex-direction:column;gap:.35rem;margin-top:.25rem}
 .intent-features li{font-size:var(--tsm);color:var(--ink-muted);padding-left:1rem;position:relative}
 .intent-features li::before{content:'—';position:absolute;left:0;color:var(--ink-faint)}
+
 /* Install steps */
 .install-steps{counter-reset:step;display:flex;flex-direction:column;gap:.6rem}
 .install-steps li{counter-increment:step;font-size:var(--tsm);color:var(--ink-muted);padding-left:1.75rem;position:relative;line-height:1.6}
 .install-steps li::before{content:counter(step);position:absolute;left:0;top:.05rem;font-size:var(--t2xs);font-weight:700;color:var(--accent-tools);letter-spacing:.08em}
-@media(min-width:640px){.tools-full-grid{grid-template-columns:1fr 1fr}}
-@media(min-width:960px){.tool-full-card{grid-template-columns:1fr 1fr}.tool-full-card__visual{border-bottom:none;border-right:1px solid var(--rule);min-height:300px}}
 
+@media(min-width:640px){.tools-full-grid{grid-template-columns:1fr}} /* Keeps detailed cards as elegant stacked wide-rows, or toggle back to '1fr 1fr' if you drop text depth */
+@media(min-width:960px){
+  .tool-full-card{grid-template-columns:1fr 1fr}
+  .tool-full-card__visual{border-bottom:none;border-right:1px solid var(--rule);max-height:none;position: sticky; top: 80px;} /* Sticky side panels stop long content stretching from making a void */
+}
 /* ============================================================
    COMMUNITY PAGE
    ============================================================ */
@@ -315,3 +343,5 @@ hr{border:none;border-top:1px solid var(--rule)}
 .value-card__body{font-size:var(--tsm);color:var(--ink-muted);line-height:1.7}
 @media(min-width:640px){.studio-credentials{grid-template-columns:1fr 1fr}.values-grid{grid-template-columns:1fr 1fr}}
 @media(min-width:960px){.values-grid{grid-template-columns:repeat(3,1fr)}}
+
+
